@@ -1,0 +1,311 @@
+PASSO 01 - SEQUÊNCIAS BÁSICAS
+1) Escreva um programa que mostre na tela a mensagem "Olá, Mundo!"
+Algoritmo "semnome"
+Var
+
+Inicio
+   escreva("Olá, Mundo!")
+Fimalgoritmo
+========================================================================================
+2) Faça um programa que leia o nome de uma pessoa e mostre uma mensagem de boasvindas para ela:
+Ex:
+Qual é o seu nome? João da Silva
+Olá João da Silva, é um prazer te conhecer!
+Algoritmo "semnome"
+Var
+      nome: caractere
+Inicio
+
+   escreva("Qual é o seu nome?")
+   leia(nome)
+   escreva("Olá ", nome,", é um prazer te conhecer!")
+
+Fimalgoritmo
+========================================================================================
+
+3) Crie um programa que leia o nome e o salário de um funcionário, mostrando no
+final uma mensagem.
+Ex:
+Nome do Funcionário: Maria do Carmo
+Salário: 1850,45
+O funcionário Maria do Carmo tem um salário de R$1850,45 em Junho.
+
+Var
+nome: caractere
+sal: real
+Inicio
+escreva("Nome do Funcionário: ")
+leia (nome)
+escreva("Salário: ")
+leia(sal)
+escreva("O funcionário ", nome," tem um salário de R$", sal," em Junho.")
+Fimalgoritmo
+========================================================================================
+4) Desenvolva um algoritmo que leia dois números inteiros e mostre o somatório
+entre eles.
+Ex:
+Digite um valor: 8
+Digite outro valor: 5
+A soma entre 8 e 5 é igual a 13.
+
+Var
+num1, num2, soma: real
+Inicio
+escreva("Digite um valor: ")
+leia(num1)
+escreva("Digite outro valor: ")
+leia(num2)
+soma<-num1+num2
+escreva("A soma entre",num1," e ",num2," é igual a ",soma,".")
+Fimalgoritmo
+========================================================================================
+5) Faça um programa que leia as duas notas de um aluno em uma matéria e mostre
+na tela a sua média na disciplina.
+Ex:
+Nota 1: 4.5
+Nota 2: 8.5
+A média entre 4.5 e 8.5 é igual a 6.5
+Var
+
+      nota1, nota2, media: real
+Inicio
+
+   escreva("Nota 1: ")
+   leia(nota1)
+   escreva("Nota 2: ")
+   leia(nota2)
+   
+   media<- (4.5+8.5)/2
+   escreva("A média entre ", nota1, " e ", nota2, " é igual a ", media)
+
+Fimalgoritmo
+========================================================================================
+6) Faça um programa que leia um número inteiro e mostre o seu antecessor e seu
+sucessor.
+Ex:
+Digite um número: 9
+O antecessor de 9 é 8
+O sucessor de 9 é 10
+Var
+
+      numero, anterior, sucessor: inteiro
+Inicio
+
+   escreva("Número: ")
+   leia(numero)
+   anterior <- numero - 1
+   sucessor <- numero + 1
+   escreval("Antecessor:", anterior)
+   escreval("Sucessor:", sucessor)
+
+Fimalgoritmo
+========================================================================================
+7) Crie um algoritmo que leia um número real e mostre na tela o seu dobro e a
+sua terça parte.
+Ex:
+Digite um número: 3.5
+O dobro de 3.5 é 7.0
+A terça parte de 3.5 é 1.16666
+
+Var
+
+      numero, dobro, terco: real
+Inicio
+
+   escreva("Número: ")
+   leia(numero)
+   dobro <- numero + numero
+   terco <- (numero * 1)/3
+   escreval("Dobro:", dobro:1:1)
+   escreval("Terço:", terco:1:5)
+Fimalgoritmo
+//*Solução chatgpt
+Var
+
+      numero, dobro, terco: real
+Inicio
+
+   escreva("Número: ")
+   leia(numero)
+   dobro <- numero + numero
+   terco <- (numero / 3) * 100000
+   terco <- int(terco) / 100000
+   escreval("Dobro:", dobro:1:1)
+   escreval("Terço:", terco:1:5)
+Fimalgoritmo
+========================================================================================
+8) Desenvolva um programa que leia uma distância em metros e mostre os valores
+relativos em outras medidas.
+Ex:
+Digite uma distância em metros: 185.72
+A distância de 85.7m corresponde a:
+0.18572Km
+1.8572Hm
+18.572Dam
+1857.2dm
+18572.0cm
+185720.0mm
+
+
+Var
+
+      metro, Km, Hm, Dam, dm, cm, mm: real
+Inicio
+
+   escreva("Digite uma distância em metros: ") //185.72
+   leia(metro)
+   escreval("A distância de ", metro, "m corresponde a: ")
+
+     Km <- metro / 1000
+   escreval(Km, "Km")//0.18572Km
+     Hm <- metro / 100
+   escreval(Hm, "Hm")//1.8572Hm
+     Dam <- metro /10
+   escreval(Dam, "Dam")//18.572Dam
+     dm <- metro *10
+   escreval(dm, "dm") //1857.2dm
+     cm <- metro / 100
+   escreval(cm, "cm")//18572.0cm
+     mm <- metro /1000
+   escreval(mm, "mm")//185720.0mm
+
+Fimalgoritmo
+========================================================================================
+9) Faça um algoritmo que leia quanto dinheiro uma pessoa tem na carteira (em R$)
+e mostre quantos dólares ela pode comprar. Considere US$1,00 = R$3,45.
+Var
+      dinheiro, dolar: real
+Inicio
+  escreva("Real: ")
+  leia(dinheiro)
+  dolar <- 3.5
+  dinheiro <- dinheiro * dolar
+  escreva("Dólar: ", dinheiro:2:2)
+Fimalgoritmo
+========================================================================================
+
+10) Faça um algoritmo que leia a largura e altura de uma parede, calcule e
+mostre a área a ser pintada e a quantidade de tinta necessária para o serviço,
+sabendo que cada litro de tinta pinta uma área de 2metros quadrados.
+Var
+
+      largura, altura, area, qtd_tinta: real
+Inicio
+      escreva("Largura: ")
+      leia(largura)
+      escreva("Altura: ")
+      leia(altura)
+      
+      area <- largura * altura
+      qtd_tinta <- area / 2
+      
+      escreval("Área: ", area, "m²")
+      escreva("Quantidade de tinta: ", qtd_tinta, "l")
+Fimalgoritmo
+========================================================================================
+11) Desenvolva uma lógica que leia os valores de A, B e C de uma equação do
+segundo grau e mostre o valor de Delta.
+Var
+      A, B, C, DELTA: real
+Inicio
+      escreva("A: ")
+      leia(A)
+      escreva("B: ")
+      leia(B)
+      escreva("C: ")
+      leia(C)
+      //B²-4.A.C
+      DELTA <- (B^2) - 4 * A * C
+      
+      escreva("DELTA: ", delta)
+
+Fimalgoritmo
+========================================================================================
+12) Crie um programa que leia o preço de um produto, calcule e mostre o seu
+PREÇO PROMOCIONAL, com 5% de desconto.
+Var
+
+      preco, promo: real
+Inicio
+      escreva("Preço: ")
+      leia(preco)
+      
+      promo <- (preco * 15)/100
+      escreva("Preço promocional: ", preco-promo)
+
+Fimalgoritmo
+========================================================================================
+13) Faça um algoritmo que leia o salário de um funcionário, calcule e mostre o
+seu novo salário, com 15% de aumento.
+Var
+
+      salario, novo_salario: real
+Inicio
+      escreva("Salario: ")
+      leia(salario)
+      
+      novo_salario <- (salario*0.15) + salario
+      escreva("Salário com aumento: ", novo_salario)
+
+Fimalgoritmo
+========================================================================================
+14) A locadora de carros precisa da sua ajuda para cobrar seus serviços. Escreva
+um programa que pergunte a quantidade de Km percorridos por um carro alugado e a
+quantidade de dias pelos quais ele foi alugado. Calcule o preço total a pagar,
+sabendo que o carro custa R$90 por dia e R$0,20 por Km rodado.
+//custa R$90 por dia e R$0,20 por Km rodado.
+Var
+       dias_alugados: inteiro
+       km_percorridos, total: real
+Inicio
+      escreva("Dias alugados: ")
+      leia(dias_alugados)
+      
+      escreva("Distândia percorrida: ")
+      leia(km_percorridos)
+      
+      dias_alugados <- dias_alugados *  90
+      km_percorridos <- km_percorridos * 0,20
+      total <-dias_alugados + km_percorridos
+      escreva("Valor total: ", total:1:2)
+
+Fimalgoritmo
+========================================================================================
+15) Crie um programa que leia o número de dias trabalhados em um mês e mostre o
+salário de um funcionário, sabendo que ele trabalha 8 horas por dia e ganha R$25
+por hora trabalhada.
+Var
+       dias_trabalhados: inteiro
+       salario, horas, valor: real
+Inicio
+      escreva("Dias trabalhados: ")
+      leia(dias_trabalhados)
+      horas<- 8
+      valor <- 25
+      salario <- dias_trabalhados * horas * valor
+      escreva("Salario: ", salario:2:2)
+
+Fimalgoritmo
+========================================================================================
+16) [DESAFIO] Escreva um programa para calcular a redução do tempo de vida de um
+fumante. Pergunte a quantidade de cigarros fumados por dias e quantos anos ele
+já fumou. Considere que um fumante perde 10 min de vida a cada cigarro. Calcule
+quantos dias de vida um fumante perderá e exiba o total em dias.
+??????????????
+
+Var
+       cigarro_qtd, anos_fumante: inteiro
+
+Inicio
+      escreva("Quantidade de cigarros fumados: ")
+      leia(cigarros_qtd) //5 por dia
+      escreva("Fumou por quantos anos?")
+      leia(anos_fumante) //2anos
+      
+      anos_fumante <- 365 * anos_fumante
+      dias_perdidos <- anos_fumante * 24
+      * cigarros_qtd
+      escreva("Quantidade de dias perdidos: ", dias_perdidos)
+
+Fimalgoritmo
+faltam:11-7-14-15-16
