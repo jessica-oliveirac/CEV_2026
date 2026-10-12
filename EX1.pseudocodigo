@@ -291,21 +291,33 @@ Fimalgoritmo
 fumante. Pergunte a quantidade de cigarros fumados por dias e quantos anos ele
 já fumou. Considere que um fumante perde 10 min de vida a cada cigarro. Calcule
 quantos dias de vida um fumante perderá e exiba o total em dias.
-??????????????
 
 Var
-       cigarro_qtd, anos_fumante: inteiro
+       cigarros_qtd, anos_fumante, minutos_perdidos, dias_perdidos: real
 
 Inicio
       escreva("Quantidade de cigarros fumados: ")
       leia(cigarros_qtd) //5 por dia
-      escreva("Fumou por quantos anos?")
+      escreva("Fumou por quantos anos? ")
       leia(anos_fumante) //2anos
       
       anos_fumante <- 365 * anos_fumante
-      dias_perdidos <- anos_fumante * 24
-      * cigarros_qtd
-      escreva("Quantidade de dias perdidos: ", dias_perdidos)
+                      // 365 * 2 =730d
+      dias_perdidos <- anos_fumante * cigarros_qtd
+                    //2 * 730 = 3650c
+                    
+      minutos_perdidos <- 10
+      dias_perdidos <-  dias_perdidos * minutos_perdidos
+                    //3650*10 =36500
+      minutos_perdidos<- 60/minutos_perdidos
+                         //60/10 = 6
+                         
+      dias_perdidos<- dias_perdidos/minutos_perdidos
+                      //36500/6  = 6013
+                      
+      dias_perdidos <- dias_perdidos/24
+                    //6013/24
+      escreva("Quantidade de dias perdidos: ", int(dias_perdidos), " dias perdidos")
 
 Fimalgoritmo
 faltam:11-7-14-15-16
