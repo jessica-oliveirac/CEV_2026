@@ -1,0 +1,216 @@
+PASSO 02 - CONDIÇÕES BÁSICAS
+17) Escreva um programa que pergunte a velocidade de um carro. Caso ultrapasse
+80Km/h, exiba uma mensagem dizendo que o usuário foi multado. Nesse caso, exiba
+o valor da multa, cobrando R$5 por cada Km acima da velocidade permitida.
+Var
+       velocidade, multa: real
+
+Inicio
+      escreva("Velocidade: ")
+      leia(velocidade)
+      
+      se(velocidade>80) entao
+         escreval("MULTADO")
+         multa <- (velocidade - 80) * 5
+         multa <- velocidade + multa
+         escreva("Multa: ", multa:1:2)
+      fimSe
+      //(90-80) * 5 -> 10 *5 -> 50
+      //90 + 50
+         
+Fimalgoritmo
+
+========================================================================================
+18) Faça um programa que leia o ano de nascimento de uma pessoa, calcule a idade
+dela e depois mostre se ela pode ou não votar.
+
+Var
+       data_nasc, data_atual, idade: real
+
+Inicio
+      escreva("Ano de nascimento: ")
+      leia(data_nasc)
+
+      data_atual <- 2026
+      idade <- data_atual - data_nasc
+
+      Se(idade>=18) entao
+         escreva("Apto a votar!")
+      fimSe
+         
+Fimalgoritmo
+========================================================================================
+19) Crie um algoritmo que leia o nome e as duas notas de um aluno, calcule a sua
+média e mostre na tela. No final, analise a média e mostre se o aluno teve ou
+não um bom aproveitamento (se ficou acima da média 7.0).
+Var
+   N1, N2, media: Real
+
+Inicio
+      escreva("Nota 1: " )
+      leia(N1)
+      escreva("Nota 2: " )
+      leia(N2)
+
+      media <- (N1+N2)/2
+      escreval("Média: ", media)
+      
+      Se(media>7) entao
+                  escreval("Aluno com bom aproveitamento.")
+      Senao
+           escreval("Aluno NÃO teve um bom aproveitamento.")
+      fimSE
+Fimalgoritmo
+
+
+========================================================================================
+20) Desenvolva um programa que leia um número inteiro e mostre se ele é PAR ou
+ÍMPAR.
+Var
+       num: inteiro
+Inicio
+      escreva("Número: ")
+      leia(num)
+      
+      Se(num mod 2 =0) entao
+          escreva("PAR")
+      Senao
+           escreva("Ímpar")
+      fimSe
+         
+Fimalgoritmo
+========================================================================================
+21) Faça um algoritmo que leia um determinado ano e mostre se ele é ou não
+BISSEXTO.
+
+Var
+   ano: Real
+
+Inicio
+      escreva("Ano: ")
+      leia(ano)
+      
+      Se(ano mod 4 = 0)entao
+             escreva("Ano bissexto")
+      Senao
+           escreva("Não é ano bissexto")
+      fimSe
+Fimalgoritmo
+
+========================================================================================
+22) Escreva um programa que leia o ano de nascimento de um rapaz e mostre a sua
+situação em relação ao alistamento militar.
+ - Se estiver antes dos 18 anos, mostre em quantos anos faltam para o
+alistamento.
+ - Se já tiver depois dos 18 anos, mostre quantos anos já se passaram do
+alistamento.
+Var
+       idade, anos_alistar: inteiro
+Inicio
+      escreva("Idade: ")
+      leia(idade)
+      
+      Se(idade>18) entao
+                   anos_alistar <- idade - 18   //20 -> 2anos passaram
+          escreva("Já se passaram ", anos_alistar, " anos para o alistamento")
+      Senao
+           anos_alistar <- 18 - idade    //15 -> 3anos faltam
+           escreva("Faltam ", anos_alistar, " anos para o alistamento")
+      fimSe
+         
+Fimalgoritmo
+
+========================================================================================
+23) Numa promoção exclusiva para o Dia da Mulher, uma loja quer dar descontos
+para todos, mas especialmente para mulheres. Faça um programa que leia nome,
+sexo e o valor das compras do cliente e calcule o preço com desconto. Sabendo
+que:
+ - Homens ganham 5% de desconto
+ - Mulheres ganham 13% de desconto
+ Algoritmo "semnome"
+Var
+// Seção de Declarações das variáveis 
+     nome, sexo: caractere
+     valor: real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+                escreva("Nome: ")
+      leia(nome)
+      escreva("Sexo: ")
+      leia(sexo)
+      escreva("Valor: ")
+      leia(valor)
+
+
+      Se(sexo = "m") entao
+              valor <- (valor * 0.05) + valor
+          escreva("Valor com 5% de desconto: ", valor:1:2)//115,00
+      senao
+         se(sexo = "f") entao
+                valor <- (valor * 0.13) + valor    //   113,00
+            escreva("Valor com 13% de desconto: ", valor:1:2)
+         fimse
+      fimse
+Fimalgoritmo
+ ========================================================================================
+24) Faça um algoritmo que pergunte a distância que um passageiro deseja
+percorrer em Km. Calcule o preço da passagem, cobrando R$0.50 por Km para
+viagens até 200Km e R$0.45 para viagens mais longas.
+Var
+   km: real
+
+Inicio
+   escreva("Distância percorrida: ")
+   leia(km)
+
+   Se(km<=200) entao
+      km <- 0.50 * km
+      escreva("Preço da viagem: ", km:1:2)
+   Senao
+      km <- 0.45 * km
+      escreva("Preço da viagem: ", km:1:2)
+   fimSE
+
+Fimalgoritmo
+========================================================================================
+25) [DESAFIO] Crie um programa que leia o tamanho de três segmentos de reta.
+Analise seus comprimentos e diga se é possível formar um triângulo com essas
+retas. Matematicamente, para três segmentos formarem um triângulo, o comprimento
+de cada lado deve ser menor que a soma dos outros dois.
+Var
+   L1, L2, L3: Real
+   TRI: logico
+
+Inicio
+   escreva("Lado 1: ")
+   leia(L1)
+   escreva("Lado 2: ")
+   leia(L2)
+   escreva("Lado 3: ")
+   leia(L3)
+   
+   TRI <-( (L1>L2+L3) ou (L2>L1+L3)  ou (L3>L2+L1) )
+   escreva("É UM TRIÂNGULO? ", TRI)
+
+Fimalgoritmo
+
+algoritmo 2
+Var
+   L1, L2, L3: Real
+
+Inicio
+   escreva("Lado 1: ")
+   leia(L1)
+   escreva("Lado 2: ")
+   leia(L2)
+   escreva("Lado 3: ")
+   leia(L3)
+
+   Se( (L1>L2+L3) ou (L2>L1+L3)  ou (L3>L2+L1) ) entao
+      escreva("É UM TRIÂNGULO!")
+   fimse
+
+Fimalgoritmo
+
+23
